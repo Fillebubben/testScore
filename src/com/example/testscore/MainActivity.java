@@ -212,6 +212,7 @@ public class MainActivity extends Activity{
 	}*/
 	
 	public void submit(View v){
+		// HEJ Lars
 		// HJÅLP!!! VILL FÅ KNAPPEN ATT TA FRÅN EDIT TEXT OCH LÄGGA TILL MIN SCORE INT
 		scoreinput.getText();
 		int score=Integer.parseInt(scoreinput.getText().toString());
