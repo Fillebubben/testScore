@@ -21,7 +21,7 @@ public class MainActivity extends Activity{
 	private Button submit;
 	private EditText scoreinput;
 	int HighScore= 100000;
-	int Score =1000;
+	//int Score =1000;
 	int S1= 100;
 	int S2= 90;
 	int S3= 80;
@@ -70,6 +70,28 @@ public class MainActivity extends Activity{
 		submit= (Button) findViewById(R.id.button1);
 		
 												
+		
+		
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+public void GameOver(int Score){
+		T1.setText("1. "+ "Ditt namn "+ S1);
+		T2.setText("2. "+ "Ditt namn "+ S2);
+		T3.setText("3. "+ "Ditt namn "+ S3);
+		T4.setText("4. "+ "Ditt namn "+ S4);
+		T5.setText("5. "+ "Ditt namn "+ S5);
+		T6.setText("6. "+ "Ditt namn "+ S6);
+		T7.setText("7. "+ "Ditt namn "+ S7);
+		T8.setText("8. "+ "Ditt namn "+ S8);
+		T9.setText("9. "+ "Ditt namn "+ S9);
+		T10.setText("10. "+ "Ditt namn "+ S10);
+		
 		if(Score >S1){
 			S1= Score;
 			T1.setText("1. " + "Ditt namn "+ " Poäng: "+  S1);
@@ -138,85 +160,15 @@ public class MainActivity extends Activity{
 			T10.setText("10. "+ "Ditt namn "+ " Poäng: "+ S10);
 		}else{
 			T10.setText("10. "+ "Ditt namn "+ " Poäng: "+ S10);
-		}
-		
+		}	
 	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
-	}
-	/*public void GameOver(){
-		T1.setText("1. "+ "Ditt namn "+ S1);
-		T2.setText("2. "+ "Ditt namn "+ S2);
-		T3.setText("3. "+ "Ditt namn "+ S3);
-		T4.setText("4. "+ "Ditt namn "+ S4);
-		T5.setText("5. "+ "Ditt namn "+ S5);
-		T6.setText("6. "+ "Ditt namn "+ S6);
-		T7.setText("7. "+ "Ditt namn "+ S7);
-		T8.setText("8. "+ "Ditt namn "+ S8);
-		T9.setText("9. "+ "Ditt namn "+ S9);
-		T10.setText("10. "+ "Ditt namn "+ S10);
-		
-		if(Score >S1 && Score >S2 && Score >S3 && Score >S4 && Score >S5 && Score >S6 && Score >S7 && Score >S8 && Score >S9 && Score >S10){
-			S1= Score;
-			T1.setText("1. " + "Ditt namn "+ S1);
-		}
-		if(Score <S1 && Score >S2 && Score >S3 && Score >S4 && Score >S5 && Score >S6 && Score >S7 && Score >S8 && Score >S9 && Score >S10){
-			S2=Score;
-			T2.setText("2. "+ "Ditt namn "+ S2);
-
-		}
-		if(Score <S1 && Score <S2 && Score >S3 && Score >S4 && Score >S5 && Score >S6 && Score >S7 && Score >S8 && Score >S9 && Score >S10){
-			S3=Score;
-			T3.setText("3. "+ "Ditt namn "+ S3);
-		
-		}
-		if(Score <S1 && Score <S2 && Score <S3 && Score >S4 && Score >S5 && Score >S6 && Score >S7 && Score >S8 && Score >S9 && Score >S10){
-			S4=Score;
-			T4.setText("4. "+ "Ditt namn "+ S4);
-		
-		}
-		if(Score <S1 && Score <S2 && Score <S3 && Score <S4 && Score >S5 && Score >S6 && Score >S7 && Score >S8 && Score >S9 && Score >S10){
-			S5=Score;
-			T5.setText("5. "+ "Ditt namn "+ S5);
-		
-		}
-		if(Score <S1 && Score <S2 && Score <S3 && Score <S4 && Score <S5 && Score >S6 && Score >S7 && Score >S8 && Score >S9 && Score >S10){
-			S6=Score;
-			T6.setText("6. "+ "Ditt namn "+ S6);
-		
-		}
-		if(Score <S1 && Score <S2 && Score <S3 && Score <S4 && Score <S5 && Score <S6 && Score >S7 && Score >S8 && Score >S9 && Score >S10){
-			S7=Score;
-			T7.setText("7. "+ "Ditt namn "+ S7);
-		
-		}
-		if(Score <S1 && Score <S2 && Score <S3 && Score <S4 && Score <S5 && Score <S6 && Score <S7 && Score >S8 && Score >S9 && Score >S10){
-			S8=Score;
-			T8.setText("8. "+ "Ditt namn "+ S8);
-		
-		}
-		if(Score <S1 && Score <S2 && Score <S3 && Score <S4 && Score <S5 && Score <S6 && Score <S7 && Score <S8 && Score >S9 && Score >S10){
-			S9=Score;
-			T9.setText("9. "+ "Ditt namn "+ S9);
-		
-		}
-		if(Score <S1 && Score <S2 && Score <S3 && Score <S4 && Score <S5 && Score <S6 && Score <S7 && Score <S8 && Score <S9 && Score >S10){
-			S10=Score;
-			T10.setText("10. "+ "Ditt namn "+ S10);
-		
-		}		
-	}*/
 	
 	public void submit(View v){
 		// HEJ Lars
 		// HJÅLP!!! VILL FÅ KNAPPEN ATT TA FRÅN EDIT TEXT OCH LÄGGA TILL MIN SCORE INT
-		scoreinput.getText();
+		
 		int score=Integer.parseInt(scoreinput.getText().toString());
-		score=Score;
+		GameOver(score);
 	}
 	    
 	public void onClick(View v){
