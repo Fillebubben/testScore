@@ -4,6 +4,8 @@ package com.example.testscore;
 
 
 
+import java.util.ArrayList;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -20,6 +22,7 @@ public class MainActivity extends Activity{
 	private TextView T1, T2, T3, T4, T5, T6, T7, T8, T9, T10;
 	private Button submit;
 	private EditText scoreinput;
+	private ArrayList<Integer> scoreList;
 	int HighScore= 100000;
 	//int Score =1000;
 	int S1= 100;
@@ -32,8 +35,12 @@ public class MainActivity extends Activity{
 	int S8= 30;
 	int S9= 20;
 	int S10= 10;
-	private static final int REQUEST_CODE = 10;
-
+	//private static final int REQUEST_CODE = 10;
+	
+	
+	 
+	
+	
 
 	
 	
@@ -44,7 +51,11 @@ public class MainActivity extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);		
-		
+		 scoreList = new ArrayList<Integer>();
+		 //Vill få min Int Score (som ändras baserat på vad jag skriver i min textview och klickar submit att läggas i en arraylist 
+		 //så den istället för att ändra det översta värdet får de "gamla" att hoppa neråt
+		 //Vill sedan få listan att "uppdateras" och gamla hoppar neråt istället för att raderas
+		 
 		/*första = (TableRow)  findViewById(R.id.tableRow1);
 		andra = (TableRow)  findViewById(R.id.tableRow2);
 		tredje = (TableRow)  findViewById(R.id.tableRow3);
