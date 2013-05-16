@@ -23,6 +23,7 @@ public class MainActivity extends Activity{
 	private Button submit;
 	private EditText scoreinput;
 	private ArrayList<Integer> scoreList;
+	private String N1, N2, N3, N4, N5, N6,N7,N8,N9,N10, newName;
 	int HighScore= 100000;
 	//int Score =1000;
 	int S1= 100;
@@ -105,72 +106,82 @@ public void GameOver(int Score){
 		
 		if(Score >S1){
 			S1= Score;
-			T1.setText("1. " + "Ditt namn "+ " Poäng: "+  S1);
+			N1=newName;
+			T1.setText("1. " + N1+ " Poäng: "+  S1);
 		}else{
-			T1.setText("1. " + "Ditt namn "+ " Poäng: "+  S1);
+			T1.setText("1. " + N1 + " Poäng: "+  S1);
 		}
 		
 		if(Score <S1 && Score >S2){
 			S2=Score;
-			T2.setText("2. "+ "Ditt namn "+ " Poäng: "+ S2);
+			N2=newName;
+			T2.setText("2. "+ N2+ " Poäng: "+ S2);
 		}else{
-			T2.setText("2. "+ "Ditt namn "+ " Poäng: "+ S2);
+			T2.setText("2. "+ N2+ " Poäng: "+ S2);
 		}
 		
 		if(Score <S2 && Score >S3){
 			S3=Score;
-			T3.setText("3. "+ "Ditt namn "+ " Poäng: "+ S3);
+			N3=newName;
+			T3.setText("3. "+ N3+ " Poäng: "+ S3);
 		}else{
-			T3.setText("3. "+ "Ditt namn "+ " Poäng: "+ S3);
+			T3.setText("3. "+ N3+ " Poäng: "+ S3);
 		}
 		
 		if(Score <S3 && Score >S4){
 			S4=Score;
-			T4.setText("4. "+ "Ditt namn "+ " Poäng: "+  S4);
+			N4=newName;
+			T4.setText("4. "+ N4+ " Poäng: "+  S4);
 		}else{
-			T4.setText("4. "+ "Ditt namn "+ " Poäng: "+  S4);
+			T4.setText("4. "+ N4+ " Poäng: "+  S4);
 		}
 		
 		if(Score <S4 && Score >S5){
 			S5=Score;
-			T5.setText("5. "+ "Ditt namn "+" Poäng: "+  S5);
+			N5=newName;
+			T5.setText("5. "+ N5+" Poäng: "+  S5);
 		}else{
-			T5.setText("5. "+ "Ditt namn "+" Poäng: "+  S5);
+			T5.setText("5. "+ N5+" Poäng: "+  S5);
 		}
 		
 		if(Score <S5 && Score >S6){
 			S6=Score;
-			T6.setText("6. "+ "Ditt namn "+ " Poäng: "+ S6);	
+			N6=newName;
+			T6.setText("6. "+ N6+ " Poäng: "+ S6);	
 		}else{
-			T6.setText("6. "+ "Ditt namn "+ " Poäng: "+ S6);
+			T6.setText("6. "+ N6+ " Poäng: "+ S6);
 		}
 		
 		if(Score <S6 && Score >S7){
 			S7=Score;
-			T7.setText("7. "+ "Ditt namn "+" Poäng: "+  S7);
+			N7=newName;
+			T7.setText("7. "+ N7+" Poäng: "+  S7);
 		}else{
-			T7.setText("7. "+ "Ditt namn "+" Poäng: "+  S7);
+			T7.setText("7. "+ N7+" Poäng: "+  S7);
 		}
 		
 		if(Score <S7 && Score >S8 ){
 			S8=Score;
-			T8.setText("8. "+ "Ditt namn "+" Poäng: "+  S8);
+			N8=newName;
+			T8.setText("8. "+ N8+" Poäng: "+  S8);
 			}else{
-				T8.setText("8. "+ "Ditt namn "+" Poäng: "+  S8);
+				T8.setText("8. "+ N8+" Poäng: "+  S8);
 			}
 		
 		if(Score <S8 && Score >S9){
 			S9=Score;
-			T9.setText("9. "+ "Ditt namn "+" Poäng: "+  S9);
+			N9=newName;
+			T9.setText("9. "+ N9+" Poäng: "+  S9);
 		}else{
-			T9.setText("9. "+ "Ditt namn "+" Poäng: "+  S9);
+			T9.setText("9. "+ N9+" Poäng: "+  S9);
 		}
 		
 		if(Score<S9 && Score >S10){
 			S10=Score;
-			T10.setText("10. "+ "Ditt namn "+ " Poäng: "+ S10);
+			N10=newName;
+			T10.setText("10. "+ N10+ " Poäng: "+ S10);
 		}else{
-			T10.setText("10. "+ "Ditt namn "+ " Poäng: "+ S10);
+			T10.setText("10. "+ N10+ " Poäng: "+ S10);
 		}	
 	}
 	
