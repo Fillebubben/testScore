@@ -191,6 +191,7 @@ public void GameOver(int Score){
 		
 		int score=Integer.parseInt(scoreinput.getText().toString());
 		GameOver(score);
+		
 	}
 	    
 	public void onClick(View v){
