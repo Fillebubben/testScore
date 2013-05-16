@@ -1,15 +1,14 @@
 package com.example.testscore;
-
-
-
-
-
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Random;
 
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,7 +21,8 @@ public class MainActivity extends Activity{
 	private TextView T1, T2, T3, T4, T5, T6, T7, T8, T9, T10;
 	private Button submit;
 	private EditText scoreinput;
-	private ArrayList<Integer> scoreList;
+	private ArrayList<Integer> scoreList; //H‰r t‰nker jag att alla personer oc deras scores finns
+	
 	private String N1, N2, N3, N4, N5, N6,N7,N8,N9,N10, newName;
 	int HighScore= 100000;
 	//int Score =1000;
@@ -52,7 +52,10 @@ public class MainActivity extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);		
-		 scoreList = new ArrayList<Integer>();
+
+
+		 
+		 
 		 //Vill få min Int Score (som ändras baserat på vad jag skriver i min textview och klickar submit att läggas i en arraylist 
 		 //så den istället för att ändra det översta värdet får de "gamla" att hoppa neråt
 		 //Vill sedan få listan att "uppdateras" och gamla hoppar neråt istället för att raderas
@@ -61,7 +64,7 @@ public class MainActivity extends Activity{
 		andra = (TableRow)  findViewById(R.id.tableRow2);
 		tredje = (TableRow)  findViewById(R.id.tableRow3);
 		fjärde = (TableRow)  findViewById(R.id.tableRow4);
-		femte = (TableRow)  findViewById(R.id.tableRow5);
+		femte = (TableRow)  findViewById(R.id.tablbˆr ha dineRow5);
 		sjätte = (TableRow)  findViewById(R.id.tableRow6);
 		sjunde = (TableRow)  findViewById(R.id.tableRow7);
 		åttonde = (TableRow)  findViewById(R.id.tableRow8);
@@ -91,6 +94,17 @@ public class MainActivity extends Activity{
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// TODO Auto-generated method stub
+		if (R.id.testLars == item.getItemId()){
+			Intent i = new Intent(this,TestActivityLars.class);
+			startActivity(i);
+			
+		}
+		return super.onOptionsItemSelected(item);
 	}
 public void GameOver(int Score){
 		T1.setText("1. "+ "Ditt namn "+ S1);
@@ -185,10 +199,7 @@ public void GameOver(int Score){
 		}	
 	}
 	
-	public void submit(View v){
-		// HEJ Lars
-		// HJÅLP!!! VILL FÅ KNAPPEN ATT TA FRÅN EDIT TEXT OCH LÄGGA TILL MIN SCORE INT
-		
+	public void submit(View v){	
 		int score=Integer.parseInt(scoreinput.getText().toString());
 		GameOver(score);
 		

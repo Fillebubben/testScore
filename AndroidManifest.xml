@@ -22,7 +22,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="NameInput"></activity>
+        <activity android:name="com.example.testscore.NameInput" >
+        </activity>
+        <activity
+            android:name="com.example.testscore.TestActivityLars"
+            android:label="@string/title_activity_test_activity_lars" >
+        </activity>
     </application>
 
 </manifest>
