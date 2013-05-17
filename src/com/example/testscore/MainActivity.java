@@ -21,6 +21,7 @@ public class MainActivity extends Activity{
 	private TextView T1, T2, T3, T4, T5, T6, T7, T8, T9, T10;
 	private Button submit;
 	private EditText scoreinput;
+	private String extras = getIntent().getExtras().getString("kuk");
 	private ArrayList<Integer> scoreList; //Här tänker jag att alla personer oc deras scores finns
 	
 	private String N1, N2, N3, N4, N5, N6,N7,N8,N9,N10, newName;
@@ -107,16 +108,18 @@ public class MainActivity extends Activity{
 		return super.onOptionsItemSelected(item);
 	}
 public void GameOver(int Score){
-		T1.setText("1. "+ "Ditt namn "+ S1);
-		T2.setText("2. "+ "Ditt namn "+ S2);
-		T3.setText("3. "+ "Ditt namn "+ S3);
-		T4.setText("4. "+ "Ditt namn "+ S4);
-		T5.setText("5. "+ "Ditt namn "+ S5);
-		T6.setText("6. "+ "Ditt namn "+ S6);
-		T7.setText("7. "+ "Ditt namn "+ S7);
-		T8.setText("8. "+ "Ditt namn "+ S8);
-		T9.setText("9. "+ "Ditt namn "+ S9);
-		T10.setText("10. "+ "Ditt namn "+ S10);
+	
+		T1.setText("1. "+ N1+ S1);
+		T2.setText("2. "+ N2+ S2);
+		T3.setText("3. "+ N3+ S3);
+		T4.setText("4. "+ N4+ S4);
+		T5.setText("5. "+ N5+ S5);
+		T6.setText("6. "+ N6+ S6);
+		T7.setText("7. "+ N7+ S7);
+		T8.setText("8. "+ N8+ S8);
+		T9.setText("9. "+ N9+ S9);
+		T10.setText("10. "+ N10+ S10);
+		
 		
 		if(Score >S1){
 			S1= Score;
