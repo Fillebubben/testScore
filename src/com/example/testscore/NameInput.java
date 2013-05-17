@@ -13,3 +13,4 @@ public class NameInput extends Activity {
 				
 	}
 }
+//hej
