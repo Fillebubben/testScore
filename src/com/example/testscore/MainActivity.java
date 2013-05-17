@@ -21,7 +21,7 @@ public class MainActivity extends Activity{
 	private TextView T1, T2, T3, T4, T5, T6, T7, T8, T9, T10;
 	private Button submit;
 	private EditText scoreinput;
-	private String extras = getIntent().getExtras().getString("kuk");
+	//private String extras = getIntent().getExtras().getString("kuk");
 	private ArrayList<Integer> scoreList; //H‰r t‰nker jag att alla personer oc deras scores finns
 	
 	private String N1, N2, N3, N4, N5, N6,N7,N8,N9,N10, newName;
@@ -40,37 +40,14 @@ public class MainActivity extends Activity{
 	//private static final int REQUEST_CODE = 10;
 	
 	
-	 
-	
-	
-
-	
-	
-	
-	
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);		
-
-
-		 
-		 
-		 //Vill få min Int Score (som ändras baserat på vad jag skriver i min textview och klickar submit att läggas i en arraylist 
+		
+		//Vill få min Int Score (som ändras baserat på vad jag skriver i min textview och klickar submit att läggas i en arraylist 
 		 //så den istället för att ändra det översta värdet får de "gamla" att hoppa neråt
 		 //Vill sedan få listan att "uppdateras" och gamla hoppar neråt istället för att raderas
-		 
-		/*första = (TableRow)  findViewById(R.id.tableRow1);
-		andra = (TableRow)  findViewById(R.id.tableRow2);
-		tredje = (TableRow)  findViewById(R.id.tableRow3);
-		fjärde = (TableRow)  findViewById(R.id.tableRow4);
-		femte = (TableRow)  findViewById(R.id.tablbˆr ha dineRow5);
-		sjätte = (TableRow)  findViewById(R.id.tableRow6);
-		sjunde = (TableRow)  findViewById(R.id.tableRow7);
-		åttonde = (TableRow)  findViewById(R.id.tableRow8);
-		nionde= (TableRow)  findViewById(R.id.tableRow9);
-		tionde = (TableRow)  findViewById(R.id.tableRow10);*/
 		
 		T1= (TextView) findViewById(R.id.textView1);
 		T2= (TextView) findViewById(R.id.textView2);
@@ -84,10 +61,7 @@ public class MainActivity extends Activity{
 		T10= (TextView) findViewById(R.id.textView10);
 		scoreinput= (EditText) findViewById(R.id.editText1);
 		submit= (Button) findViewById(R.id.button1);
-		
-												
-		
-		
+			
 	}
 
 	@Override
@@ -103,11 +77,11 @@ public class MainActivity extends Activity{
 		if (R.id.testLars == item.getItemId()){
 			Intent i = new Intent(this,TestActivityLars.class);
 			startActivity(i);
-			
-		}
+			}
 		return super.onOptionsItemSelected(item);
 	}
-public void GameOver(int Score){
+
+	public void GameOver(int Score){
 	
 		T1.setText("1. "+ N1+ S1);
 		T2.setText("2. "+ N2+ S2);
@@ -213,6 +187,7 @@ public void GameOver(int Score){
 		startActivity(i);
 		//startActivityForResult(i, REQUEST_CODE);
 	}
+	
 	
 	/* @Override
 	  protected void onActivityResult(int requestCode, int resultCode, Intent data) {
