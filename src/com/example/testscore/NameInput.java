@@ -25,10 +25,11 @@ public class NameInput extends Activity {
 		Submit.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				String kuk =inputName.getText().toString();
-				Intent i = new Intent(getBaseContext(), MainActivity.class);
-				i.putExtra("kuk", kuk);
-				startActivity(i);
+				String hej =inputName.getText().toString();
+				Intent data = new Intent();
+				data.putExtra("hej", hej);
+				setResult(Activity.RESULT_OK, data);
+				finish();
 			}
 		});
 	}

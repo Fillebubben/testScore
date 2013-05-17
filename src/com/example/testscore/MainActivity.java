@@ -7,6 +7,7 @@ import java.util.Random;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -21,12 +22,11 @@ public class MainActivity extends Activity{
 	private TextView T1, T2, T3, T4, T5, T6, T7, T8, T9, T10;
 	private Button submit;
 	private EditText scoreinput;
-	//private String extras = getIntent().getExtras().getString("kuk");
-	private ArrayList<Integer> scoreList; //Här tänker jag att alla personer oc deras scores finns
+	private ArrayList<Person> scoreList;
 	
 	private String N1, N2, N3, N4, N5, N6,N7,N8,N9,N10, newName;
-	int HighScore= 100000;
-	//int Score =1000;
+	//int HighScore= 100000;
+	int Score =1000;
 	int S1= 100;
 	int S2= 90;
 	int S3= 80;
@@ -44,6 +44,18 @@ public class MainActivity extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);		
+		 scoreList = new ArrayList<Person>();// Skapa listan samt stoppa in lite folk
+		 scoreList.add(new Person("Peter","1"));
+		 scoreList.add(new Person("Peter","2"));
+		 scoreList.add(new Person("Per","3"));
+		 scoreList.add(new Person("Per","4"));
+		 scoreList.add(new Person("Per","5"));
+		 scoreList.add(new Person("Per","6"));
+		 scoreList.add(new Person("Pelle","7"));
+		 scoreList.add(new Person("Perla","8"));
+		 scoreList.add(new Person("Kalle", "9"));
+		 scoreList.add(new Person("Perka", "10"));
+	
 		
 		//Vill fŒ min Int Score (som Šndras baserat pŒ vad jag skriver i min textview och klickar submit att lŠggas i en arraylist 
 		 //sŒ den istŠllet fšr att Šndra det šversta vŠrdet fŒr de "gamla" att hoppa nerŒt
@@ -80,20 +92,26 @@ public class MainActivity extends Activity{
 			}
 		return super.onOptionsItemSelected(item);
 	}
+	@Override
+protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+String s = data.getExtras().getString("hej");
+Log.i("filip", "hittar extras" + s );
+	}
+	
 
 	public void GameOver(int Score){
-	
-		T1.setText("1. "+ N1+ S1);
-		T2.setText("2. "+ N2+ S2);
-		T3.setText("3. "+ N3+ S3);
-		T4.setText("4. "+ N4+ S4);
-		T5.setText("5. "+ N5+ S5);
-		T6.setText("6. "+ N6+ S6);
-		T7.setText("7. "+ N7+ S7);
-		T8.setText("8. "+ N8+ S8);
-		T9.setText("9. "+ N9+ S9);
-		T10.setText("10. "+ N10+ S10);
-		
+		Collections.sort(scoreList);
+		T1.setText("1. "+ scoreList.get(0).getFirstname()+ scoreList.get(0).getPoints());
+		T2.setText("2. "+ scoreList.get(1).getFirstname()+ scoreList.get(1).getPoints());
+		T3.setText("3. "+ scoreList.get(2).getFirstname()+ scoreList.get(2).getPoints());
+		T4.setText("4. "+ scoreList.get(3).getFirstname()+ scoreList.get(3).getPoints());
+		T5.setText("5. "+ scoreList.get(4).getFirstname()+ scoreList.get(4).getPoints());
+		T6.setText("6. "+ scoreList.get(5).getFirstname()+ scoreList.get(5).getPoints());
+		T7.setText("7. "+ scoreList.get(6).getFirstname()+ scoreList.get(6).getPoints());
+		T8.setText("8. "+ scoreList.get(7).getFirstname()+ scoreList.get(7).getPoints());
+		T9.setText("9. "+ scoreList.get(8).getFirstname()+ scoreList.get(8).getPoints());
+		T10.setText("10. "+ scoreList.get(9).getFirstname()+ scoreList.get(9).getPoints());
 		
 		if(Score >S1){
 			S1= Score;
@@ -185,18 +203,7 @@ public class MainActivity extends Activity{
 	public void onClick(View v){
 		Intent i = new Intent(this, NameInput.class);
 		startActivity(i);
-		//startActivityForResult(i, REQUEST_CODE);
+	
 	}
-	
-	
-	/* @Override
-	  protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-	    if (resultCode == RESULT_OK && requestCode == REQUEST_CODE) {
-	      if (data.hasExtra("returnKey1")) {
-	        Toast.makeText(this, data.getExtras().getString("returnKey1"),
-	            Toast.LENGTH_SHORT).show();
-	      }
-	    }
-	  }*/
 
 }

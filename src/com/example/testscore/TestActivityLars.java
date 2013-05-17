@@ -26,6 +26,7 @@ public class TestActivityLars extends Activity {
 		 scoreList.add(new Person("Per","6"));
 		 scoreList.add(new Person("Pelle","7"));
 		 scoreList.add(new Person("Perla","8"));
+		 scoreList.add(new Person("Kalle", "9"));
 		 //Du bör sen ha dina personer i enlista som i en av labbarna som du kan titta på
 		 //Jag visar lite här hur man kan lägga till score samt sortera 
 		 Random r = new Random();

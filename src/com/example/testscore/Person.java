@@ -23,12 +23,15 @@ public class Person implements Comparable<Person>{ //Detta fixxa så att man kan 
 		setPoints(getPoints() + pointsToAdd);
 	}
 
-	private int getPoints() {
+	public int getPoints() {
 		return points;
 	}
 
-	private void setPoints(int points) {
+	public void setPoints(int points) {
 		this.points = points;
+	}
+	public String getFirstname(){
+		return firstName;
 	}
 
 	@Override
