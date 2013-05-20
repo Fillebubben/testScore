@@ -1,10 +1,7 @@
 
 package com.example.testscore;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
-import java.util.Random;
-
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -16,7 +13,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TableRow;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends Activity{
 	private TableRow första,andra,tredje,fjärde,femte,sjätte,sjunde,åttonde,nionde,tionde;
