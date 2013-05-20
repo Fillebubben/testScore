@@ -20,7 +20,7 @@ public class MainActivity extends Activity{
 	private Button submit;
 	private EditText scoreinput;
 	private ArrayList<Person> scoreList;
-	
+	//Lite kommentarer härs
 	private String N1, N2, N3, N4, N5, N6,N7,N8,N9,N10, newName;
 	//int HighScore= 100000;
 	int Score =1000;
