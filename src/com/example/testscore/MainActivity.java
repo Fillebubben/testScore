@@ -55,6 +55,8 @@ public class MainActivity extends Activity{
 		 scoreList.add(new Person("Perla","8"));
 		 scoreList.add(new Person("Kalle", "9"));
 		 scoreList.add(new Person("Perka", "10"));
+		 
+		 
 	
 		
 		//Vill få min Int Score (som ändras baserat på vad jag skriver i min textview och klickar submit att läggas i en arraylist 
@@ -97,6 +99,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// TODO Auto-generated method stub
 String s = data.getExtras().getString("hej");
 Log.i("filip", "hittar extras" + s );
+
 	}
 	
 
@@ -113,7 +116,10 @@ Log.i("filip", "hittar extras" + s );
 		T9.setText("9. "+ scoreList.get(8).getFirstname()+ scoreList.get(8).getPoints());
 		T10.setText("10. "+ scoreList.get(9).getFirstname()+ scoreList.get(9).getPoints());
 		
-		if(Score >S1){
+			
+		
+		
+		/*if(Score >S1){
 			S1= Score;
 			N1=newName;
 			T1.setText("1. " + N1+ " Poäng: "+  S1);
@@ -191,7 +197,7 @@ Log.i("filip", "hittar extras" + s );
 			T10.setText("10. "+ N10+ " Poäng: "+ S10);
 		}else{
 			T10.setText("10. "+ N10+ " Poäng: "+ S10);
-		}	
+		}*/	
 	}
 	
 	public void submit(View v){	
