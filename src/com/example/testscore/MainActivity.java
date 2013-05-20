@@ -53,7 +53,7 @@ public class MainActivity extends Activity{
 		 scoreList.add(new Person("Kalle", "9"));
 		 scoreList.add(new Person("Perka", "10"));
 	
-		
+		//hej
 		//Vill få min Int Score (som ändras baserat på vad jag skriver i min textview och klickar submit att läggas i en arraylist 
 		 //så den istället för att ändra det översta värdet får de "gamla" att hoppa neråt
 		 //Vill sedan få listan att "uppdateras" och gamla hoppar neråt istället för att raderas
@@ -203,4 +203,4 @@ Log.i("filip", "hittar extras" + s );
 	
 	}
 
-}
+ }
