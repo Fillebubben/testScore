@@ -19,6 +19,7 @@ public class MainActivity extends Activity{
 	private Button submit;
 	private EditText scoreinput;
 	private ArrayList<Person> scoreList;
+    int Score=100;
 
 	
 	
@@ -63,33 +64,35 @@ public class MainActivity extends Activity{
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 			// TODO Auto-generated method stub
-		String s = data.getExtras().getString("hej");
+		String s = data.getExtras().getString("name");
 		Log.i("filip", "hittar extras" + " "+ s );
 		//Om man h‰r vill l‰gga till en ny post i listan sÂ h‰r 
-		Random r = new Random(); //Kˆr lite random sÂ det kan bli olika poster
-		int i = r.nextInt(100); //Ger ett random mellan 1 o 100;
-		Person p = new Person(s,"A"+i);
+		//Random r = new Random(); //Kˆr lite random sÂ det kan bli olika poster
+		//int i = r.nextInt(100); //Ger ett random mellan 1 o 100;
+		int i = Score;
+		if(Score >= scoreList.get(9).getPoints()){
+		Person p = new Person(s, "A" +i);
 		p.addPoints(i);
 		scoreList.add(p);
 		updateScoreList();
-		//Sen kommer du v‰ ‰ven att behˆva uppdatera score om det ‰r samma spelare flera gÂnger.
+		}
 	}
 		
 	
-	//Dˆpte om denna metoden den ‰r ju en update eller?
+	//Uppdaterar listan och skriver ut namnen på de som "platsar"
 	public void updateScoreList(){
 		
 		Collections.sort(scoreList);
-		T1.setText("1. "+ scoreList.get(0).getFirstname()+ scoreList.get(0).getPoints());
-		T2.setText("2. "+ scoreList.get(1).getFirstname()+ scoreList.get(1).getPoints());
-		T3.setText("3. "+ scoreList.get(2).getFirstname()+ scoreList.get(2).getPoints());
-		T4.setText("4. "+ scoreList.get(3).getFirstname()+ scoreList.get(3).getPoints());
-		T5.setText("5. "+ scoreList.get(4).getFirstname()+ scoreList.get(4).getPoints());
-		T6.setText("6. "+ scoreList.get(5).getFirstname()+ scoreList.get(5).getPoints());
-		T7.setText("7. "+ scoreList.get(6).getFirstname()+ scoreList.get(6).getPoints());
-		T8.setText("8. "+ scoreList.get(7).getFirstname()+ scoreList.get(7).getPoints());
-		T9.setText("9. "+ scoreList.get(8).getFirstname()+ scoreList.get(8).getPoints());
-		T10.setText("10. "+ scoreList.get(9).getFirstname()+ scoreList.get(9).getPoints());
+		T1.setText("1. "+ scoreList.get(0).getFirstname()+ " Poäng: "+scoreList.get(0).getPoints());
+		T2.setText("2. "+ scoreList.get(1).getFirstname()+ " Poäng: "+scoreList.get(1).getPoints());
+		T3.setText("3. "+ scoreList.get(2).getFirstname()+ " Poäng: "+scoreList.get(2).getPoints());
+		T4.setText("4. "+ scoreList.get(3).getFirstname()+ " Poäng: "+scoreList.get(3).getPoints());
+		T5.setText("5. "+ scoreList.get(4).getFirstname()+ " Poäng: "+scoreList.get(4).getPoints());
+		T6.setText("6. "+ scoreList.get(5).getFirstname()+ " Poäng: "+scoreList.get(5).getPoints());
+		T7.setText("7. "+ scoreList.get(6).getFirstname()+ " Poäng: "+scoreList.get(6).getPoints());
+		T8.setText("8. "+ scoreList.get(7).getFirstname()+ " Poäng: "+scoreList.get(7).getPoints());
+		T9.setText("9. "+ scoreList.get(8).getFirstname()+ " Poäng: "+scoreList.get(8).getPoints());
+		T10.setText("10. "+scoreList.get(9).getFirstname()+" Poäng: "+scoreList.get(9).getPoints());
 		
 	
 		}
