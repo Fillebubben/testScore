@@ -52,7 +52,7 @@ public class MainActivity extends Activity{
 		T10= (TextView) findViewById(R.id.textView10);
 		scoreinput= (EditText) findViewById(R.id.editText1);
 		submit= (Button) findViewById(R.id.button1);
-		updateScoreList(0);	//Uppdatera visning. Vad gör inparametern slängde dit en nolla
+		updateScoreList();	//Uppdatera visning. Vad gör inparametern slängde dit en nolla
 	}
 
 	@Override
@@ -73,13 +73,13 @@ public class MainActivity extends Activity{
 		Person p = new Person(s,"A"+i);
 		p.addPoints(i);
 		scoreList.add(p);
-		updateScoreList(0);
+		updateScoreList();
 		//Sen kommer du vä även att behöva uppdatera score om det är samma spelare flera gånger.
 	}
 		
 	
 	//Döpte om denna metoden den är ju en update eller?
-	public void updateScoreList(int Score){
+	public void updateScoreList(){
 		
 		Collections.sort(scoreList);
 		T1.setText("1. "+ scoreList.get(0).getFirstname()+ scoreList.get(0).getPoints());
