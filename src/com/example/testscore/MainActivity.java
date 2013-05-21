@@ -40,6 +40,7 @@ public class MainActivity extends Activity{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		GameOver(Score);
 		setContentView(R.layout.activity_main);		
 		 scoreList = new ArrayList<Person>();// Skapa listan samt stoppa in lite folk
 		 scoreList.add(new Person("Peter","1"));
@@ -80,7 +81,7 @@ public class MainActivity extends Activity{
 		return true;
 	}
 	
-	@Override
+	/*@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// TODO Auto-generated method stub
 		if (R.id.testLars == item.getItemId()){
@@ -88,16 +89,21 @@ public class MainActivity extends Activity{
 			startActivity(i);
 			}
 		return super.onOptionsItemSelected(item);
-	}
+	}*/
+	
 	@Override
 protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// TODO Auto-generated method stub
 String s = data.getExtras().getString("hej");
 Log.i("filip", "hittar extras" + s );
+
 	}
 	
 
 	public void GameOver(int Score){
+		//€r det hŠr jag instansierar en ny person? Jag vill skapa honom/henne med hjŠlp av namnet frŒn NameInput och variabeln Score
+		//scoreList.add(new Person(s).setPoints(Score));
+		
 		Collections.sort(scoreList);
 		T1.setText("1. "+ scoreList.get(0).getFirstname()+ scoreList.get(0).getPoints());
 		T2.setText("2. "+ scoreList.get(1).getFirstname()+ scoreList.get(1).getPoints());
@@ -109,6 +115,7 @@ Log.i("filip", "hittar extras" + s );
 		T8.setText("8. "+ scoreList.get(7).getFirstname()+ scoreList.get(7).getPoints());
 		T9.setText("9. "+ scoreList.get(8).getFirstname()+ scoreList.get(8).getPoints());
 		T10.setText("10. "+ scoreList.get(9).getFirstname()+ scoreList.get(9).getPoints());
+		
 		
 		if(Score >S1){
 			S1= Score;
@@ -191,11 +198,11 @@ Log.i("filip", "hittar extras" + s );
 		}	
 	}
 	
-	public void submit(View v){	
+	/*public void submit(View v){	
 		int score=Integer.parseInt(scoreinput.getText().toString());
-		GameOver(score);
 		
-	}
+		GameOver(score);
+	}*/
 	    
 	public void onClick(View v){
 		Intent i = new Intent(this, NameInput.class);

@@ -14,6 +14,7 @@ import android.widget.EditText;
 public class NameInput extends Activity {
 	private Button Submit;
 	private EditText inputName;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 	
