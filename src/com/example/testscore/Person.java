@@ -9,18 +9,18 @@ public class Person implements Comparable<Person>{ //Detta fixxa så att man kan 
 		// TODO Auto-generated constructor stub
  		this.firstName = firstName;
  		this.lastName = lastName;
- 		setPoints(0);
+ 		points = 0;
 	}
 
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return firstName + " " + lastName + " Points: " + getPoints();	
+		return firstName + " " + lastName + " Points: " + points;	
 	}
 
 	
 	public void addPoints(int pointsToAdd){
-		setPoints(getPoints() + pointsToAdd);
+		points = points + pointsToAdd;
 	}
 
 	public int getPoints() {
@@ -36,6 +36,6 @@ public class Person implements Comparable<Person>{ //Detta fixxa så att man kan 
 
 	@Override
 	public int compareTo(Person another) {
-		return this.points - another.points; //Fundera på detta och läs
+		return  another.points-this.points; //Fundera på detta och läs
 	}
 }
