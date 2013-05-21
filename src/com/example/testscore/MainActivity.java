@@ -9,11 +9,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TableRow;
 import android.widget.TextView;
 
 public class MainActivity extends Activity{
@@ -52,7 +50,7 @@ public class MainActivity extends Activity{
 		T10= (TextView) findViewById(R.id.textView10);
 		scoreinput= (EditText) findViewById(R.id.editText1);
 		submit= (Button) findViewById(R.id.button1);
-		updateScoreList();	//Uppdatera visning. Vad gör inparametern slängde dit en nolla
+		updateScoreList();	//Uppdatera visning.
 	}
 
 	@Override
