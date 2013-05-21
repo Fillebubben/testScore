@@ -140,27 +140,12 @@
     </TableRow>
      
      <Button
-        android:id="@+id/Button01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="Calling an intent" >
+         android:id="@+id/Button01"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:onClick="onClick"
+         android:text="Gå till nameinput för test" >
+
     </Button>
-
-     <EditText
-         android:id="@+id/editText1"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:ems="10" >
-
-         <requestFocus />
-     </EditText>
-
-     <Button
-         android:id="@+id/button1"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:onClick="submit"
-         android:text="@string/submit" />
 
 </TableLayout>

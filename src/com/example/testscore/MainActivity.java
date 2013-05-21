@@ -62,25 +62,15 @@ public class MainActivity extends Activity{
 		return true;
 	}
 	
-	/*@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// TODO Auto-generated method stub
-		if (R.id.testLars == item.getItemId()){
-			Intent i = new Intent(this,TestActivityLars.class);
-			startActivity(i);
-			}
-		return super.onOptionsItemSelected(item);
-	}*/
-	
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 			// TODO Auto-generated method stub
 		String s = data.getExtras().getString("hej");
-		Log.i("filip", "hittar extras" + s );
+		Log.i("filip", "hittar extras" + " "+ s );
 		//Om man här vill lägga till en ny post i listan så här 
 		Random r = new Random(); //Kör lite random så det kan bli olika poster
 		int i = r.nextInt(100); //Ger ett random mellan 1 o 100;
-		Person p = new Person("Per","A"+i);
+		Person p = new Person(s,"A"+i);
 		p.addPoints(i);
 		scoreList.add(p);
 		updateScoreList(0);
@@ -90,8 +80,6 @@ public class MainActivity extends Activity{
 	
 	//Döpte om denna metoden den är ju en update eller?
 	public void updateScoreList(int Score){
-		//€r det hŠr jag instansierar en ny person? Jag vill skapa honom/henne med hjŠlp av namnet frŒn NameInput och variabeln Score
-		//scoreList.add(new Person(s).setPoints(Score));
 		
 		Collections.sort(scoreList);
 		T1.setText("1. "+ scoreList.get(0).getFirstname()+ scoreList.get(0).getPoints());
@@ -107,17 +95,7 @@ public class MainActivity extends Activity{
 		
 	
 		}
-
-	public void submit(View v){
-		try{ //Lite try catch här om man inte skriver ngt eller skriver fel
-			int score=Integer.parseInt(scoreinput.getText().toString());
-			updateScoreList(score); //Här måste du väl först leta upp vem det är som spelar så du kan uppdatera rätt person?
-		}catch(Exception e){
-			
-		}	
-	}
-
-	    
+    
 	public void onClick(View v){
 		Intent i = new Intent(this, NameInput.class);
 		startActivityForResult(i, 0); //Det var fel metod denna gör att vi väntar på svar
