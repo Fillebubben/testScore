@@ -25,10 +25,14 @@ public final class R {
     }
     public static final class id {
         public static final int Button01=0x7f080015;
+        public static final int RelativeLayout1=0x7f080019;
+        public static final int Restart=0x7f08001b;
         public static final int TableLayout1=0x7f080000;
-        public static final int action_settings=0x7f080019;
-        public static final int button1=0x7f080017;
-        public static final int editText1=0x7f080018;
+        public static final int action_settings=0x7f08001c;
+        public static final int editText1=0x7f08001a;
+        public static final int restart=0x7f080018;
+        public static final int sorry=0x7f080016;
+        public static final int sorry2=0x7f080002;
         public static final int tableRow1=0x7f080001;
         public static final int tableRow10=0x7f080013;
         public static final int tableRow2=0x7f080003;
@@ -39,9 +43,8 @@ public final class R {
         public static final int tableRow7=0x7f08000d;
         public static final int tableRow8=0x7f08000f;
         public static final int tableRow9=0x7f080011;
-        public static final int testField=0x7f080016;
-        public static final int testLars=0x7f08001a;
-        public static final int textView1=0x7f080002;
+        public static final int testField=0x7f080017;
+        public static final int testLars=0x7f08001d;
         public static final int textView10=0x7f080014;
         public static final int textView2=0x7f080004;
         public static final int textView3=0x7f080006;
@@ -56,6 +59,7 @@ public final class R {
         public static final int activity_main=0x7f030000;
         public static final int activity_test_activity_lars=0x7f030001;
         public static final int nameinput=0x7f030002;
+        public static final int sorry=0x7f030003;
     }
     public static final class menu {
         public static final int main=0x7f070000;

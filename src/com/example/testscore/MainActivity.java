@@ -15,11 +15,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends Activity{
-	private TextView T1, T2, T3, T4, T5, T6, T7, T8, T9, T10;
+	private TextView T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, sorry;
 	private Button submit;
 	private EditText scoreinput;
 	private ArrayList<Person> scoreList;
-    int Score=100;
+
 
 	
 	
@@ -39,7 +39,7 @@ public class MainActivity extends Activity{
 		 scoreList.add(new Person("Kalle", "Av"));
 		 scoreList.add(new Person("Perka", "Lerka"));
 		
-		T1= (TextView) findViewById(R.id.textView1);
+		T1= (TextView) findViewById(R.id.sorry2);
 		T2= (TextView) findViewById(R.id.textView2);
 		T3= (TextView) findViewById(R.id.textView3);
 		T4= (TextView) findViewById(R.id.textView4);
@@ -49,8 +49,9 @@ public class MainActivity extends Activity{
 		T8= (TextView) findViewById(R.id.textView8);
 		T9= (TextView) findViewById(R.id.textView9);
 		T10= (TextView) findViewById(R.id.textView10);
+		sorry=(TextView) findViewById(R.id.sorry);
 		scoreinput= (EditText) findViewById(R.id.editText1);
-		submit= (Button) findViewById(R.id.button1);
+		submit= (Button) findViewById(R.id.restart);
 		updateScoreList();	//Uppdatera visning.
 	}
 
@@ -67,14 +68,16 @@ public class MainActivity extends Activity{
 		String s = data.getExtras().getString("name");
 		Log.i("filip", "hittar extras" + " "+ s );
 		//Om man här vill lägga till en ny post i listan så här 
-		//Random r = new Random(); //Kör lite random så det kan bli olika poster
-		//int i = r.nextInt(100); //Ger ett random mellan 1 o 100;
-		int i = Score;
-		if(Score >= scoreList.get(9).getPoints()){
-		Person p = new Person(s, "A" +i);
-		p.addPoints(i);
+		Random r = new Random(); //Kör lite random så det kan bli olika poster
+		
+		int score = r.nextInt(100); //Ger ett random mellan 1 o 100;
+		if (score > scoreList.get(9).getPoints()){
+		Person p = new Person(s, "A" +score);
+		p.addPoints(score);
 		scoreList.add(p);
 		updateScoreList();
+		}else{
+			sorry.setText("Sorry your score wasn't enough for a placement on the top 10");
 		}
 	}
 		
