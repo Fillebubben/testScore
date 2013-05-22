@@ -28,6 +28,7 @@
             android:name="com.example.testscore.TestActivityLars"
             android:label="@string/title_activity_test_activity_lars" >
         </activity>
+        <activity android:name="com.example.testscore.Sorry" ></activity>
     </application>
 
 </manifest>

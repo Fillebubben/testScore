@@ -26,10 +26,11 @@ public final class R {
     public static final class id {
         public static final int Button01=0x7f080015;
         public static final int RelativeLayout1=0x7f080019;
-        public static final int Restart=0x7f08001b;
+        public static final int Restart=0x7f08001c;
         public static final int TableLayout1=0x7f080000;
-        public static final int action_settings=0x7f08001c;
-        public static final int editText1=0x7f08001a;
+        public static final int action_settings=0x7f08001d;
+        public static final int congratz=0x7f08001b;
+        public static final int namn=0x7f08001a;
         public static final int restart=0x7f080018;
         public static final int sorry=0x7f080016;
         public static final int sorry2=0x7f080002;
@@ -44,7 +45,7 @@ public final class R {
         public static final int tableRow8=0x7f08000f;
         public static final int tableRow9=0x7f080011;
         public static final int testField=0x7f080017;
-        public static final int testLars=0x7f08001d;
+        public static final int testLars=0x7f08001e;
         public static final int textView10=0x7f080014;
         public static final int textView2=0x7f080004;
         public static final int textView3=0x7f080006;
@@ -99,5 +100,8 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f060001;
+        /**  For API level 11 or later, the Holo theme is available and we prefer that. 
+         */
+        public static final int ThemeHoloDialog=0x7f060002;
     }
 }

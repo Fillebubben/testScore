@@ -50,7 +50,7 @@ public class MainActivity extends Activity{
 		T9= (TextView) findViewById(R.id.textView9);
 		T10= (TextView) findViewById(R.id.textView10);
 		sorry=(TextView) findViewById(R.id.sorry);
-		scoreinput= (EditText) findViewById(R.id.editText1);
+		scoreinput= (EditText) findViewById(R.id.namn);
 		submit= (Button) findViewById(R.id.restart);
 		updateScoreList();	//Uppdatera visning.
 	}
@@ -77,8 +77,10 @@ public class MainActivity extends Activity{
 		scoreList.add(p);
 		updateScoreList();
 		}else{
+			Intent j = new Intent(this, Sorry.class);
+			startActivity(j);
 			//Detta ska sedan komma i en egen klass och här bör intenten för att starta upp Sorry klassen komma
-			sorry.setText("Sorry your score wasn't enough for a placement on the top 10");
+			//sorry.setText("Sorry your score wasn't enough for a placement on the top 10");
 		}
 	}
 		

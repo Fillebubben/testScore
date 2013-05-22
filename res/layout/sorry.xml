@@ -16,9 +16,9 @@
         android:id="@+id/Restart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/sorry2"
         android:layout_below="@+id/sorry2"
-        android:layout_marginTop="47dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
         android:onClick="start"
         android:text="Restart" />
 

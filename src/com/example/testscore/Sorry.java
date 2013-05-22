@@ -1,4 +1,4 @@
-/*package com.example.testscore;
+package com.example.testscore;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -21,8 +21,8 @@ public class Sorry extends Activity {
 		
 		Sorry = (TextView) findViewById(R.id.sorry2);
 		
-		//String s2= i.getExtras().getString("Sorry");
-		//Sorry.setText(s2);
+		//String s2= getIntent().getExtras().getString("Sorry");
+		Sorry.setText("Sorry your score wasn't enough to get a place on our top 10. Would you like to try again?");
 		
 }
 	public void start (View v){
@@ -30,4 +30,4 @@ public class Sorry extends Activity {
 		finish();
 	
 	}
-}*/
+}
