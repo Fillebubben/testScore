@@ -27,6 +27,7 @@ public class NameInput extends Activity {
 		inputName= (EditText)findViewById(R.id.editText1);
 		inputName.setText(" ");
 		score= (TextView) findViewById(R.id.sorry2);
+		//Få in poängen på något sätt med put extras istället för blablabla
 		score.setText("Congratulations you scored:" +" blablabla" + " points. Enter your name below!");
 		
 		Submit.setOnClickListener(new OnClickListener() {

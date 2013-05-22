@@ -67,8 +67,8 @@ public class MainActivity extends Activity{
 			// TODO Auto-generated method stub
 		String s = data.getExtras().getString("name");
 		Log.i("filip", "hittar extras" + " "+ s );
-		//Om man här vill lägga till en ny post i listan så här 
-		Random r = new Random(); //Kör lite random så det kan bli olika poster
+		//Om man hŠr vill lŠgga till en ny post i listan så hŠr 
+		Random r = new Random(); //Kšr lite random så det kan bli olika poster
 		
 		int score = r.nextInt(100); //Ger ett random mellan 1 o 100;
 		if (score > scoreList.get(9).getPoints()){
@@ -77,6 +77,7 @@ public class MainActivity extends Activity{
 		scoreList.add(p);
 		updateScoreList();
 		}else{
+			//Detta ska sedan komma i en egen klass och hŠr bšr intenten fšr att starta upp Sorry klassen komma
 			sorry.setText("Sorry your score wasn't enough for a placement on the top 10");
 		}
 	}
@@ -99,7 +100,7 @@ public class MainActivity extends Activity{
 		
 	
 		}
-    
+    //denna ska bytas ut och sŠttas i if satsen som sŠger if score>= scoreList.get(9).getPoints(); fast utan onClick
 	public void onClick(View v){
 		Intent i = new Intent(this, NameInput.class);
 		startActivityForResult(i, 0); //Det var fel metod denna gör att vi väntar på svar
