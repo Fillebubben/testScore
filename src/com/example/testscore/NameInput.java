@@ -13,11 +13,11 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class NameInput extends Activity {
-   
-	private Button Submit;
+    private ImageButton Submit;
 	private EditText inputName;
 	private TextView score;
 	
@@ -28,7 +28,7 @@ public class NameInput extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.nameinput);
 		
-		Submit = (Button) findViewById(R.id.restart);
+		Submit = (ImageButton) findViewById(R.id.restart);
 		inputName= (EditText)findViewById(R.id.namn);
 		inputName.setText(" ");
 		score= (TextView) findViewById(R.id.congratz);

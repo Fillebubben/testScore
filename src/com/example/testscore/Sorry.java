@@ -19,7 +19,7 @@ public class Sorry extends Activity {
 		setContentView(R.layout.sorry);	
 		Restart = (Button) findViewById(R.id.Restart);
 		
-		Sorry = (TextView) findViewById(R.id.sorry2);
+		Sorry = (TextView) findViewById(R.id.firstTxt);
 		
 		//String s2= getIntent().getExtras().getString("Sorry");
 		Sorry.setText("Sorry your score wasn't enough to get a place on our top 10. Would you like to try again?");

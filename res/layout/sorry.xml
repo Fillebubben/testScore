@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="@drawable/blure" >
 
     <TextView
-        android:id="@+id/sorry2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/firstTxt"
+    android:layout_width="350dp"
+        android:layout_height="120dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="86dp"
-        android:text="TextView" />
+        android:textSize="20sp"
+        android:layout_marginTop="300dp" />
 
-    <Button
-        android:id="@+id/Restart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/sorry2"
+  
+
+    <ImageButton
+           android:id="@+id/Restart"
+		android:layout_width="140dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/firstTxt"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="20dp"
         android:onClick="start"
-        android:text="Restart" />
+        android:src="@drawable/restart" />
 
 </RelativeLayout>

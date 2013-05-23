@@ -4,38 +4,40 @@
     android:id="@+id/RelativeLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/blure"
     android:orientation="vertical"
     tools:context=".NameInput" >
 
+  
+
     <EditText
         android:id="@+id/namn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/congratz"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:ems="10" >
-
-        <requestFocus />
-    </EditText>
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bababab"
+        android:ems="10" />
 
     <TextView
         android:id="@+id/congratz"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="18dp"
-        android:layout_marginTop="30dp"
-        android:text="TextView" />
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:layout_marginTop="300dp" />
 
-    <Button
-        android:id="@+id/restart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageButton
+  android:id="@+id/restart"
+        android:layout_width="140dp"
+        android:layout_height="70dp"
         android:layout_below="@+id/namn"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="10dp"
         android:onClick="submit"
-        android:text="@string/submit" />
+        android:src="@drawable/ok" />
 
 </RelativeLayout>
