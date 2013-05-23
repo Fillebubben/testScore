@@ -15,20 +15,24 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.testscore.MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.testscore.NameInput" >
+        <activity android:name="com.example.testscore.NameInput" 
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="com.example.testscore.TestActivityLars"
             android:label="@string/title_activity_test_activity_lars" >
         </activity>
-        <activity android:name="com.example.testscore.Sorry" ></activity>
+        <activity android:name="com.example.testscore.Sorry" 
+            android:screenOrientation="portrait">
+        </activity>
     </application>
 
 </manifest>
