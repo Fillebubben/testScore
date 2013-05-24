@@ -9,7 +9,7 @@
     android:paddingRight="45dp"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:showDividers="none"
-    tools:context=".MainActivity" >
+    tools:context=".HighScore" >
 
     <TableRow
         android:id="@+id/tableRow1"

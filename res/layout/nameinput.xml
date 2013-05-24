@@ -4,7 +4,7 @@
     android:id="@+id/RelativeLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/blure"
+    android:background="@drawable/blureeeee"
     android:orientation="vertical"
     tools:context=".NameInput" >
 
@@ -28,6 +28,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:textSize="20sp"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
         android:layout_marginTop="300dp" />
 
     <ImageButton

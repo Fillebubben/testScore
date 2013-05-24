@@ -23,7 +23,7 @@ public final class R {
     public static final class drawable {
         public static final int bababab=0x7f020000;
         public static final int babababright=0x7f020001;
-        public static final int blure=0x7f020002;
+        public static final int blureeeee=0x7f020002;
         public static final int fintooooo=0x7f020003;
         public static final int ic_launcher=0x7f020004;
         public static final int ok=0x7f020005;
